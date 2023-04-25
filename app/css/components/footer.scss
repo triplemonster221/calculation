@@ -1,0 +1,373 @@
+.footer {
+    position: relative;
+    z-index: 1;
+    padding: 20px 0 30px;
+    background-color: #e1e1e1;
+    color: #000;
+
+
+    .footer-inner{
+        display: flex;
+        justify-content: space-between;
+        //align-items: flex-end;
+
+        @include mobile (){
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    .footer-column  {
+        width: 237px;
+
+        &:first-child {
+            width: 250px;
+        }
+
+        @include mobile (){
+            width: 100% !important;
+            text-align: center;
+        }
+    }
+
+    .made-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        span {
+            margin-right: 10px;
+            font-family: 'NunitoRegular', sans-serif;
+            font-weight: 400;
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .vk-link {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 24px !important;
+        img {
+            
+        }
+    }
+
+
+    &__text {
+        font-size: 13px;
+        line-height: 20px;
+        margin-bottom: 10px;
+        font-family: 'NunitoRegular', sans-serif;
+        font-weight: 400;
+
+        @include mobile (){
+            font-size: 14px !important;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        &.flag_footer {
+            margin-top: 0px;
+        }
+    }
+
+    .flag_footer {
+        position: relative;
+        padding-left: 42px;
+        margin-bottom: 0;
+        font-family: 'NunitoRegular', sans-serif;
+        font-weight: 400;
+
+        @include mobile (){
+            margin-top: 0;
+        } 
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 36px;
+            left: 0;
+            top: 5px;
+            background: url(../img/footer/flag.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            @include mobile (){
+                left: 36px;
+            } 
+        }
+    }
+
+    ////////////////////////////
+    /// 
+    /// 
+
+    .footer__logo {
+        width: 100px;
+        height: 40px;
+        display: block;
+        margin: 0 auto 0px; 
+        
+        img {
+            object-fit: contain;
+        }
+
+        @include mobile (){
+            width: 90px;
+            display: block;
+            height: 30px;
+            margin: 0 auto 15px;
+        }
+    }
+
+
+    ////////////////////////////
+    /// 
+    /// 
+
+    .footer-link {
+        //width: 30px;
+        //height: 19px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 44px;
+        font-size: 16px;
+        line-height: 20px;
+        text-decoration-line: underline;
+        color: rgba(5, 52, 133, 0.74);
+        transition: all .3s;
+
+        @include mobile (){
+            margin-bottom: 20px;
+        }
+
+        img {
+            object-fit: contain;
+        }
+    }
+
+
+    ////////////////////////////
+    /// 
+    /// 
+
+    .made {
+        width: auto;
+        height: auto;
+        margin: 0 auto 6px;
+        //margin-bottom: 6px;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+
+        // .made-counrty {
+        //     font-size: 14px;
+        //     line-height: 17px;
+        //     text-align: center;
+        //     color: #FFFFFF;
+        //     margin-right: 10px;
+        // }
+        // .made-img {
+        //     width: 21px;
+        //     height: 21.76px;
+        // }
+    }
+
+
+    ////////////////////////////
+    /// 
+    /// 
+
+    .header-social {
+        display: flex;
+        //align-items: center;
+       justify-content: end;
+        margin-bottom: 0px;
+
+        @include mobile (){
+            justify-content: center;
+           // margin-bottom: 20px;
+            //margin-top: 35px;
+        }
+        
+        &-left {
+            margin-right: 14px;
+            @include mobile (){
+               margin-right: 0; 
+            }
+        }
+
+        &-right {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .footer-link:hover {
+        font-size: 14px;
+        // animation-name: myAnim;
+        // animation-duration: 1s;
+        // animation-iteration-count: infinite;
+        // animation-direction: alternate;
+        // animation-timing-function: linear;
+    }
+
+    .footer__text-images {
+        display: block;
+        position: relative;
+        padding-left: 54px;
+        font-size: 13px;
+        line-height: 15px;
+        text-align: end;
+        transition: all .3s;
+        margin-bottom: 0;
+        font-family: 'NunitoRegular', sans-serif;
+        font-weight: 400;
+        
+
+        &:hover {
+            &::after {
+                transform: scale(1.1);
+
+                animation-name: myAnim;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-timing-function: linear;
+            }
+        }
+
+        @keyframes myAnim {
+            from {
+                transform: rotate(10deg);
+            }
+            50% {
+                transform: rotate(-10deg);
+            }
+            to {
+                transform: rotate(0deg);
+            }
+          }
+
+        @include mobile (){
+            padding-left: 36px;
+            width: 222px;
+            margin: 0 auto 20px;
+        }
+
+
+
+        &::after {
+            content: '';
+            position: absolute;
+            background: url(../img/footer/f5.svg);
+            background-repeat: no-repeat;
+            width: 35px;
+            height: 31px;
+            background-size: contain;
+            left: 35px;
+            top: 0;
+
+            @include mobile (){
+                left: 0;
+            }
+        }
+    }
+
+    .footer-column_big {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .footer__text_link {
+        display: block;
+        transition: all .3s;
+        font-size: 13px;
+        line-height: 15px;
+        text-decoration-line: underline;
+        //color: rgba(42, 46, 53, 0.68);
+        text-align: end;
+        font-family: 'NunitoRegular', sans-serif;
+        font-weight: 400;
+
+        @include mobile (){
+            text-align: center;
+        }
+
+        &:hover {
+            font-size: 14.3px;
+        }
+    }
+
+    .header__pnone {
+        font-family: 'NunitoBold', sans-serif;
+        font-weight: 700;
+        display: flex;
+        font-size: 18px;
+        line-height: 25px;
+        justify-content: end;
+        padding-right: 7px;
+        color: #000;
+
+        @include mobile (){
+            justify-content: center;
+        }
+
+        svg {
+            margin-right: 10px;
+        }
+    }
+
+    .header-social-right {
+        @include mobile (){
+            margin-bottom: 20px;
+        }
+    }
+
+    .second-column {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .header__calBack {
+        font-size: 13px;
+        line-height: 12px;
+        transition: all .3s;
+        text-align: start;
+        //margin-left: 67px;
+        margin-left: 0;
+        text-align: center;
+        color: #000;
+        font-family: 'NunitoRegular', sans-serif;
+        font-weight: 400;
+        @include mobile (){
+            padding: 0 0 0 0;
+            text-align: center;
+            margin-left: 0;
+            height: auto;
+            
+        }
+
+        // &:hover {
+        //     font-size: 15px;
+        // }
+    }
+
+
+}
+
+// button.away-modals  {
+//     opacity: 0;
+// }
+
+// .footer-other {
+//     cursor: default !important;
+//     pointer-events: none;
+// }
