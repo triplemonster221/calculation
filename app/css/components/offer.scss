@@ -1,439 +1,251 @@
-.offer{
-    background-image: url(../img/offer/bg1.jpg); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center right;
-    padding: 207px 0 125px;
-    position: relative;
-
-    @include to(1600px) {
-           &::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba($color: #000, $alpha: .6);
-           } 
-    }
-
-    @include small(){
-        &::after {
-           display: none;
-        }
-    }
-
-    @include mobile (){
-        &::after {
-            background: rgba($color: #fff, $alpha: .8);
-        }
-        background-position: center right;
-    }
-
-    .container {
-        position: relative;
-        z-index: 1;
-    }
-
-
-    @include small (){
-        background-image: url(../img/offer/bg.jpg); 
-        &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-        }
-    }
-
-    @include mobile (){
-        padding: 75px 0 35px;
-    }
- 
-    .offer-inner  {
-        position: relative;
-    }
-
-    &-title {
-        font-family: 'MullerExtraBold',sans-serif;
-        margin-bottom: 4px;
-        max-width: 858px;
-        width: 100%;
-        text-transform: uppercase;
-        font-size: 50px;
-        letter-spacing: 1;
-        line-height: 1.2em;
-        font-weight: 800;
-
-        font-size: calc(34px + 16 * ((100vw - 640px)/(1920 - 640)));
-
-        @media screen and(min-width: 1920px) {
-            font-size: 50px;
-            letter-spacing: 1px;
-        }
-
-        span {
-            position: relative;
-            
-            &::after {
-                content: '';
-                position: absolute;
-                background: #2856a2;
-                bottom: 0;
-                height: 10px;
-                left: 0;
-                width: 100%;
-
-                @include mobile(){
-                    height: 2px;
-                    font-size: 18px !important;
-                    line-height: 23px !important;
-                }
-            }
-
-            @include mobile(){
-                font-size: 18px !important;
-                line-height: 23px !important;
-            }
-        }
-
-        .row {
-            display: block;
-
-            @include mobile(){
-                display: inline;
-            }
-        }
-
-        @include mobile() {
-            font-size: 18px !important;
-            line-height: 23px !important;
-            margin-bottom: 5px !important;
-        }
-    }
-
-    .offer-text {
-        font-family: 'MullerRegular', sans-serif;
-        max-width: 820px;
-        width: 100%;
-        margin-bottom: 68px;
-        font-size: 36px;
-        font-weight: 400;
-        line-height: 1em;
-        letter-spacing: .03em;
-
-        font-size: calc(26px + 6 * ((100vw - 640px)/(1920 - 640)));
-
-        @media screen and(min-width: 1920px) {
-            font-size: 36px;
-            letter-spacing: 1px;
-        }
-
-        @include mobile() {
-            line-height: 22px;
-            margin-bottom: 5px;
-        }
-
-        .fat {
-            font-family: 'MullerBold', sans-serif;
-            font-weight: 700;
-        }
-    }
-
-    // СЛАЙДЕР
-    &-list {
-        display: flex;
-
-    }
-
-    .offer-swiper {
-        @include mobile() {
-            height: 165px;
-            margin-bottom: 20px;
-        }
-    }
-
-     .swiper-pagination { 
-        bottom: 0;
-    }
-
-    .swiper-pagination .swiper-pagination-bullet{
-        background: #e6e6e6;
-        font-size: 0;
-    }
-
-    .slick-dots button::before{
-        font-size: 0;
-    }
-
-    .slick-dots button:hover{
-        font-size: 0;
-    }
-
-    .slick-active button{
-        background: #ff005b;
-    }
-
-    .swiper-slide {
-        margin-right: 15px;
-        width: auto;
-        height: auto;
-        width: 30%;     
-
-        @include mobile() {
-           margin-right: 0;
-           width: 270px !important;
-           //background: rgba(255, 255, 255, 0.1);
-            //border-bottom: 3px solid #FFFFFF;
-            border-radius: 14px;
-        }
-
-        &:last-child{
-            width: 36%;
-        }
-
-        &:last-child {
-            margin-right: 0;
-
-            .offer-item__img {
-                width: 157px;
-                height: 114px;
-                img{
-                    object-fit: cover;
-                }
-                
-            }
-        }
-    }
-
-    .slick-list {
-        height: 100%;
-    }
-
-    .slick-track {
-        display: flex;
-        align-items: center;
-        height: 100%;
-        padding-left: 20px;
-
-        @include small() {
-           padding-left: 0;
-        }
-    }
-
-    .offer-slider {
-        display: flex;
-        margin-bottom: 73px;
-        max-width: 862px;
-        width: 100%;
-
-        @include mobile() {
-            height: 150px;
-         }
-
-         .slick-list {
-            @include mobile() {
-                height: 100% !important;
-             }
-            
-         }
-    }
-
+.bf_calculation {
+    padding: 100px 0;  
+    //background-color: #e6e6e6; 
     
-
     
-
-    &-item {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-
-        @include desctop() {
-            margin-right: 0;
-            padding: 49px 0 8px 11px;
-            flex: 0 1 277px;
-            flex: 0 1 auto;
-        }
-
-        @include mobile() {
-            text-align: center;
-            padding: 10px 5px 8px 10px;
-            box-shadow: none;
-            border-radius: 14px;
-            background: rgba(255,255,255,.2);
-        }
-
-        &.first {
-            .offer-item__img {
-                //margin-left: -40px;
-                margin-bottom: 5px;
-
-                @include mobile() {
-                    //margin-left: 0;
-                    width: 120px;
-                }
-            }
-        }
-
-               
-
-        &__img {
-            position: relative;
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            width: 102px;
-            height: 115px;
-            margin-bottom: 5px;
-
-            @include mobile() {
-                width: 60px;
-                height: 60px;
-                margin: 0;
-                margin-right: 12px;
-                padding-top: 0;
-                margin: 0 auto 20px;
-            }
-        
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-
-                @include mobile() {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                }
-            }
-
-
-            
-        }
-
-        
-       
-        &__info {
-            font-family: 'NunitoLight', sans-serif;
-            font-size: 16px;
-            line-height: 23px;
-            font-weight: 300;
-
-            @include mobile() {
-                font-size: 14px !important;
-                text-align: center;
-            }
-
-            .fat {
-                font-family: 'NunitoSemibold', sans-serif;
-                font-weight: 600;
-            }
-
-            .row {
-                display: block;
-            }
-        }
-
-
-    }
-
-    .offer__btn {
-
-        @include desctop() {
-            margin: 0 auto;
-        }
-    }
-
-    .wrapper {
-        
-    }
-
-    .form-section {
-        z-index: 1;
-    }
-}
-
-// СЛАЙДЕР
-
-// НИЖНЯЯ СЕКЦИЯ
-.offer-bottom  {
-    display: flex;
-    align-items: center;
-
-    @include mobile (){
-        flex-direction: column;
-     }
-
-}
-
-.offer-bottom-btn {
-    padding-right: 39px;
-
-    @include mobile (){
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    &::before {
-        content: '';
-        position: absolute;
-        right: 50px;
-        top: 29px;
-        width: 20px;
-        height: 20px;
-        background: url(../img/offer/downlound.png);
-        background-size: contain;
-
-        @include mobile (){
-            right: 21px;
-            top: 22px;
-            width: 15px;
-            height: 15px;
-        }
-    }
-}
-
-.offer-bottom-text {
-    max-width: 344px;
-    width: 100%;
-
-    @include mobile (){
+    .bf_calculation-title {
+        font-size: 38px;
         text-align: center;
-     }
-}
+        margin-bottom: 100px;
+    }
 
-// НИЖНЯЯ СЕКЦИЯ
- .slick-dots {
-    bottom: -12px;
+    .bf_calculation-tabs {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 50px;
+    }
 
-    @include mobile() {
-        bottom: -25%;
-    } 
-}
+    .bf_calculation-tab {
+        position: relative;
+        padding: 15px 15px 15px 50px;
+        cursor: pointer;
+        border: none;
+        //background-color: antiquewhite;
+        background-color: #eee;
+        //border-radius: 25px;
 
- .slick-dots li {
-    border-radius: 50%;
-    overflow: hidden;
-    width: 14px;
-    height: 14px;
-}
+        &::after{
+            content: '';
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            position: absolute;
+            background-size: contain;
+            left: 14px;
+            top: 8px;
+        }
 
- .slick-dots li button {
-    background: #e7e7e7;
-    &::before {
+        &:nth-child(1)::after {
+            background-image: url(../img/shower.png);
+        }
+
+        &:nth-child(2)::after {
+            background-image: url(../img/ruler.png);
+        }
+
+        &:nth-child(3)::after {
+            background-image: url(../img/check-mark.png);
+        }
+
+        &.bf_active {
+            background-color: rgb(188, 186, 186);
+        }
+    }
+
+    .bf_list  {
+        display: flex;
+        gap: 30px;
+        row-gap: 60px;
+        flex-wrap: wrap;
+    }
+
+    .bf_item  {
+        width: 31%;
+        //overflow: hidden;
+        
+        
+    }
+
+    .bf_item__img {
+        position: relative;
+        margin-bottom: 10px;
+        cursor: pointer;
+        border: 4px solid transparent;
+        transition: transform .3s;
+        //border-radius: 45px;
+        display: block;
+        overflow: hidden;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: .2);
+        }
+
+        img {
+            transition: transform .3s;  
+             
+        }
+
+        &:hover img{
+            //border: 4px solid rgb(240, 174, 93);  
+            transform: scale(1.1);
+        }
+
+        &:hover {
+            &::after{
+                background-color: transparent;
+            }
+            //border: 4px solid rgb(240, 174, 93);  
+            
+        }
+    }
+
+    .bf_item__title {
+        font-size: 26px;
+        line-height: 120%;
+        text-align: center;
+    }
+
+    .bf_calc-content {
+        display: flex;
+        gap: 50px;
+    }
+
+    .bf_calc-row  {
+        margin-bottom: 50px;
+    }
+
+    .bf_calc-img  {
+        flex-shrink: 0;
+        height: 400px;
+    }
+
+    .bf_calc__title {
+        margin-bottom: 15px;
+        font-size: 22px;
+        font-weight: 500;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    .bf_calc-inner {
+        width: 70%;
+    }
+
+    .bf_calc__wrapper .radio:not(checked),
+    .bf_calc__wrapper .color:not(checked) {
+        position: absolute;
         opacity: 0;
     }
-}
 
-.slick-dots li.slick-active button:before {
-    opacity: 0;
-}
+    .bf_calc__wrapper {
+        label  {
+            position: relative;
+            //padding-left: 10px;
+            cursor: pointer;
+            //padding: 0 0 0 30px;
+            
 
-.slick-dots li.slick-active button{
+           
+
+            &.rat {
+                padding: 0 0 0 30px;
+                margin-right: 20px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 22px;
+                    height: 22px;
+                    border: 1px solid #000;
+                    z-index: -1;
+                    
+                }
+            }
+
+            
+
+            
+        }
+    }
+
+    
+
+    .radio:checked + label:after,
+    .color:checked + label:after {
+        opacity: 1;
+    }
+
+    .radio:not(checked) + label::after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 4px;
+        width: 14px;
+        height: 14px;
+        //border-radius: 50%;
+        background: rgb(207, 206, 206);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.5);
+        opacity: 0;
+        transition: all .2s;
+    }
+
+    //color 
+
+    .material label {
+        display: inline-block;
+        //width: 16%;
+        height: 70px;
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+        line-height: 10;
+        font-size: 18px;
+        margin-right: 20px;
+    }
+
+    .color:not(checked) + label::after {
+        content: '';
+        top: 12px;
+        background: rgba(246, 246, 246, 0.3);
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        //border-radius: 50%;
+        left: calc(50% - 25px);
+        transition-duration: .2s;
+        border: 1px solid #000;
+        box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), inset 0px -8px 0px 0px rgba(74, 177, 158, 0.15);
+    }
+
+    .material .color:checked + label:after {
+        -webkit-transform: scale(1.2) translateY(-10px);
+        transform: scale(1.2) translateY(-10px);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2), inset 0px -36px 0px -20px rgba(0, 0, 0, 0.1);
+    }
+
+    .material .mat-1 + label:after {
+        background: rgba(246, 246, 246, 0.3);
+    }
+
+    .material .mat-2 + label:after {
+        background: rgba(149, 89, 89, 0.3);
+    }
+
+    .material .mat-3 + label:after {
+        background: rgba(68, 44, 176, 0.3);
+    }
+
+    .material .mat-4 + label:after {
+        background: rgba(34, 162, 53, 0.3);
+    }
+
 }
 
 
