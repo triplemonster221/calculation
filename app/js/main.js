@@ -1,4 +1,4 @@
-$(document).ready(function(){
+document.addEventListener('DOMContentLoaded', function() {
   
 
 //слайдер в оффере=====================
@@ -342,60 +342,73 @@ $(document).ready(function(){
   
 //---------------STOP ANIMATION============================
 
+function burger(){
+  let tabWrapper = document.querySelector('.bf_calculation_desctop-tabs');
+  let submenuList = document.querySelector('.bf_calculation_desctop-tabs ul');
+
+  tabWrapper.addEventListener('click', function(){
+    tabWrapper.classList.toggle('active')
+    submenuList.classList.toggle('active')
+  })
+}
+
+burger();
+
 
 // ============================tabs============================
 
-  // function tabs(headerSelector, tabSelector, contentSelector, activeClass) {
-  //   const header = document.querySelector(headerSelector),
-  //       tab = document.querySelectorAll(tabSelector),
-  //       content = document.querySelectorAll(contentSelector)
+  function tabs(headerSelector, tabSelector, contentSelector, activeClass) {
+    const header = document.querySelector(headerSelector),
+        tab = document.querySelectorAll(tabSelector),
+        content = document.querySelectorAll(contentSelector)
 
-  //   function hdieTabContent(){
+    function hdieTabContent(){
      
-  //       content.forEach(elem => {
-  //         elem.classList.remove(activeClass);
-  //       })
+        content.forEach(elem => {
+          elem.classList.remove(activeClass);
+        })
 
-  //       tab.forEach(elem => {
-  //           elem.classList.remove(activeClass);
-  //       })
+        tab.forEach(elem => {
+            elem.classList.remove(activeClass);
+        })
      
        
-  //   }
+    }
 
-  //   function showTabContent(i = 0) {
+    function showTabContent(i = 0) {
    
-  //       content[i].classList.add(activeClass);
-  //       tab[i].classList.add(activeClass);
+        content[i].classList.add(activeClass);
+        tab[i].classList.add(activeClass);
     
         
-  //   }
+    }
 
     
-  //     hdieTabContent();
-  //     showTabContent();
+      hdieTabContent();
+      showTabContent();
     
-  //   header.addEventListener('click', (e) => {
-  //       const target = e.target;
-  //       if(target.classList.contains(tabSelector.replace(/\./, ''))){
-  //           tab.forEach((item, i) => {
-  //               if(target == item) {
-  //                   console.log(i);
-  //                   hdieTabContent();
-  //                   showTabContent(i);
-  //               }
-  //           })
-  //       }
-  //   })
+    header.addEventListener('click', (e) => {
+        const target = e.target;
+        if(target.classList.contains(tabSelector.replace(/\./, ''))){
+            tab.forEach((item, i) => {
+                if(target == item) {
+                    console.log(i);
+                    hdieTabContent();
+                    showTabContent(i);
+                }
+            })
+        }
+    })
 
-  // }
+  }
 
   //--проверка на существование табов 
 
-  // let directionWrapper = document.querySelector('.direction-wrapper');
-  // if(directionWrapper){
-  //   tabs('.direction-tabs', '.direction-tab','.direction-content','active');
-  // }
+  let directionWrapper = document.querySelector('.bf_calculation-inner');
+  if(directionWrapper){
+    tabs('.bf_calculation-tabs', '.bf_calculation-tab','.bf_calculation-content','bf_active');
+    tabs('.bf_calculation_desctop-tabs', '.bf_calculation_desctop-tab','.bf_calculation-content','bf_active');
+  }
 
 // ============================STOP tabs============================
 
