@@ -17,30 +17,31 @@ block offer
                     .bf_calculation-content.bf_active
                         .bf_list  
                             .bf_item
-                                a.bf_item__img(href="#")  
+                                a.bf_item__img(href="#" data-cabin data-price="10")  
                                     img(src="img/m9.jpg", alt="")
                                 .bf_item__title Угловая душевая перегородка
                             .bf_item
-                                a.bf_item__img(href="#")  
+                                a.bf_item__img(href="#" data-cabin data-price="12")  
                                     img(src="img/m9.jpg", alt="")
                                 .bf_item__title Угловая душевая перегородка
                             .bf_item
-                                a.bf_item__img(href="#")  
+                                a.bf_item__img(href="#" data-cabin data-price="11")  
                                     img(src="img/m9.jpg", alt="")
                                 .bf_item__title Угловая душевая перегородка
                             .bf_item
-                                a.bf_item__img(href="#")  
+                                a.bf_item__img(href="#" data-cabin)  
                                     img(src="img/m9.jpg", alt="")
                                 .bf_item__title Угловая душевая перегородка
                             .bf_item
-                                a.bf_item__img(href="#")  
+                                a.bf_item__img(href="#" data-cabin data-price="14")  
                                     img(src="img/m9.jpg", alt="")
                                 .bf_item__title Угловая душевая перегородка
                             .bf_item
-                                a.bf_item__img(href="#")  
+                                a.bf_item__img(href="#" data-cabin data-price="15")  
                                     img(src="img/m9.jpg", alt="")
                                 .bf_item__title Угловая душевая перегородка
-                    .bf_calculation-content
+                    .bf_calculation-content.params-conten
+                        .params-conten-info Пожалйста выберете вид душевой кибины, чтобы продолжить 
                         .bf_calc-content    
                             .bf_calc-img 
                                 img(src="img/m9.jpg", alt="")
@@ -50,112 +51,116 @@ block offer
                                         
                                         label(for="options-1" class="glass") Высота 
                                             .option-row 
-                                                input(id="options-1" class="" type="text" name="height") 
+                                                input(data-height="1" id="options-1" type="text" name="height" ) 
                                                 .option-row-info 
-                                                    span max=1800 см
-                                                    span min=600 см
+                                                    span.max(data-max="1800") max=1800 см
+                                                    span.min(data-min="600") min=600 см
                                                 
                                         
                                         label(for="options-2" class="glass") Ширина
                                             .option-row 
-                                                input(id="options-2" class="" type="text" name="width") 
+                                                input(data-width="1" id="options-2" type="text" name="width" ) 
                                                 .option-row-info 
-                                                    span max=1800 см
-                                                    span min=600 см
+                                                    span.max(data-max="1800") max=1800 см
+                                                    span.min(data-min="600") min=600 см
                             .bf_calc-inner
                                 .bf_calc-row 
                                     .bf_calc__title Выберите толщину стекла 
                                     .bf_calc__wrapper.width-glass 
-                                        input(id="glass-1" class="radio" type="radio" name="glass")
+                                        input(id="glass-1" class="radio" data-glass="1" type="radio" name="glass" value="1")
                                         label(for="glass-1" class="glass")
                                             |8 мм 
-                                        input( id="glass-2" class="radio" type="radio" name="glass") 
-                                        label(for="glass-2" class="glass")
+                                        input( id="glass-2" class="radio" data-glass="2" type="radio" name="glass" value="2") 
+                                        label(for="glass-2" class="glass" )
                                             |10 мм 
                                 .bf_calc-row 
                                     .bf_calc__title Выберите цвет стекла 
                                     .bf_calc__wrapper.material 
-                                        input( id="color-1" class=" mat-1" type="radio" name="color") 
+                                        input(data-color="1" id="color-1" class=" mat-1" type="radio" name="color"  value="4") 
                                         label(for="color-1" )
                                             |Бесцветное
-                                        input( id="color-2" class=" mat-2" type="radio" name="color") 
+                                        input(data-color="2" id="color-2" class=" mat-2" type="radio" name="color"  value="5") 
                                         label(for="color-2")
                                             |Сатин 
-                                        input( id="color-3" class=" mat-3" type="radio" name="color") 
+                                        input(data-color="3" id="color-3" class=" mat-3" type="radio" name="color"  value="6") 
                                         label(for="color-3")
                                             |Бронза
-                                        input( id="color-4" class=" mat-4" type="radio" name="color") 
+                                        input(data-color="4" id="color-4" class=" mat-4" type="radio" name="color"  value="7") 
                                         label(for="color-4")
                                             |Бронза что-то 
                                 .bf_calc-row 
                                     .bf_calc__title Выберите цвет фурнитуры 
                                     .bf_calc__wrapper.furnitur 
-                                        input( id="furnitur-1" class=" furnitur-1" type="radio" name="furnitur") 
+                                        input(data-furnitur="1" id="furnitur-1" class=" furnitur-1" type="radio" name="furnitur"  value="8") 
                                         label(for="furnitur-1" )
                                             |Бесцветное
-                                        input( id="furnitur-2" class=" furnitur-2" type="radio" name="furnitur") 
+                                        input(data-furnitur="2" id="furnitur-2" class=" furnitur-2" type="radio" name="furnitur"  value="9") 
                                         label(for="furnitur-2")
                                             |Сатин   
                                 .bf_calc-row 
-                                    .bf_calc__title Выберите тип ручки 
-                                    .bf_calc__wrapper.handles 
+                                    .bf_calc__title Выберите тип ручки  
+                                    .bf_calc__wrapper.handles  
 
-                                        input( id="handles-1" class="handles-1" type="radio" name="garnityr") 
-                                        label(for="handles-1" )
+                                        input(data-handles="1" id="handles-1" class="handles-1" type="radio" name="garnityr"  value="21") 
+                                        label(data-handles="1" for="handles-1" style="background-image: url(img/knob1.jpg);")
 
-                                        input( id="handles-2" class="handles-2" type="radio" name="garnityr") 
-                                        label(for="handles-2")  
+                                        input(data-handles="2" id="handles-2" class="handles-2" type="radio" name="garnityr"   value="22") 
+                                        label(for="handles-2" style="background-image: url(img/knob4.jpg);")  
 
-                                        input( id="handles-3" class="handles-3" type="radio" name="garnityr") 
-                                        label(for="handles-3") 
+                                        input(data-handles="3" id="handles-3" class="handles-3" type="radio" name="garnityr"   value="23") 
+                                        label(for="handles-3" style="background-image: url(img/knob6.jpg);") 
 
-                                        input( id="handles-4" class="handles-4" type="radio" name="garnityr") 
-                                        label(for="handles-4")  
+                                        input(data-handles="4" id="handles-4" class="handles-4" type="radio" name="garnityr"   value="24") 
+                                        label(for="handles-4" style="background-image: url(img/knob8.jpg);")  
                                 .bf_calc-row 
-                                    .bf_calc__title Дополнительные параметры 
+                                    .bf_calc__title-dops Дополнительные параметры 
                                     .bf_calc__wrapper.parametrs
 
-                                        input( id="dostavka" class="checkbox" type="checkbox" name="garnityr") 
+                                        input(data-dostavka="1"  id="dostavka" class="checkbox" type="checkbox" name="dostavka") 
                                         label(for="dostavka" ) Доставка
                                         <br>
-                                        input( id="montazh" class="checkbox" type="checkbox" name="garnityr") 
-                                        label(for="montazh") Монтаж   
+                                        input(data-montazh="1"  id="montazh" class="checkbox" type="checkbox" name="montazh") 
+                                        label(for="montazh") Монтаж
+                                button(type="button" class="btn checkout-btn") расчитать
                     .bf_calculation-content 
                         h2.checkout-title оформление заказа
                         .checkout-inner
                             .checkout-info 
                                 h3 Ваш заказ
-                                .checkout-row 
-                                    .checkout-row-left Душевая кабина
-                                    .checkout-row-right Душевая дверь
-                                .checkout-row 
-                                    .checkout-row-left Толщина стекла:
-                                    .checkout-row-right 8 мм
-                                .checkout-row 
-                                    .checkout-row-left Цвет стекла:
-                                    .checkout-row-right Бронза
-                                .checkout-row 
-                                    .checkout-row-left Цвет фурнитуры:
-                                    .checkout-row-right Полированная сталь/полированный хром (PSS/PC)
-                                .checkout-row 
-                                    .checkout-row-left Тип ручки:
-                                    .checkout-row-right 
-                                        img(src="img/knob1.jpg", alt="")
-                                .checkout-row 
-                                    .checkout-row-left Доставка:
-                                    .checkout-row-right Да
-                                .checkout-row 
-                                    .checkout-row-left Монтаж:
-                                    .checkout-row-right Да
-                                .checkout-row 
-                                    .checkout-row-left Высота (H):
-                                    .checkout-row-right 800
-                                .checkout-row 
-                                    .checkout-row-left Длина (A):
-                                    .checkout-row-right 600
-                                .checkout-row 
-                                        .checkout-row-left Итого
-                                        .checkout-row-right 12 000 руб.
+                                .checkout-info-message 
+                                    | Чтобы продолжить пожалуйста выберите параметры на предыдущей вкладке 
+                                .checkout-info-template
+                                    //- .checkout-row 
+                                    //-     .checkout-row-left Душевая кабина
+                                    //-     .checkout-row-right Душевая дверь
+                                    //- .checkout-row 
+                                    //-     .checkout-row-left Толщина стекла:
+                                    //-     .checkout-row-right 8 мм
+                                    //- .checkout-row 
+                                    //-     .checkout-row-left Цвет стекла:
+                                    //-     .checkout-row-right Бронза
+                                    //- .checkout-row 
+                                    //-     .checkout-row-left Цвет фурнитуры:
+                                    //-     .checkout-row-right Полированная сталь/полированный хром (PSS/PC)
+                                    //- .checkout-row 
+                                    //-     .checkout-row-left Тип ручки:
+                                    //-     .checkout-row-right 
+                                    //-         img(src="img/knob1.jpg", alt="")
+                                    //- .checkout-row 
+                                    //-     .checkout-row-left Доставка:
+                                    //-     .checkout-row-right Да
+                                    //- .checkout-row 
+                                    //-     .checkout-row-left Монтаж:
+                                    //-     .checkout-row-right Да
+                                    //- .checkout-row 
+                                    //-     .checkout-row-left Высота (H):
+                                    //-     .checkout-row-right 800
+                                    //- .checkout-row 
+                                    //-     .checkout-row-left Длина (A):
+                                    //-     .checkout-row-right 600
+                                    //- .checkout-row 
+                                    //-         .checkout-row-left Итого
+                                    //-         .checkout-row-right 12 000 руб.
                             .checkout-form 
                                 form.bf-form 
                                     h3.form-title Оформление заявки

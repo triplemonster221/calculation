@@ -165,6 +165,13 @@
         }
     }
 
+    .params-conten {
+        .bf_calc-content{
+            display: none;
+        }
+       
+    }
+
     .bf_list  {
         display: flex;
         gap: 30px;
@@ -470,6 +477,9 @@
             border: 2px solid #ddd;
             -webkit-transition: all ease .2s;
             transition: all ease .2s;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
 
             @include mobile(){
                 width: 48.9%;
@@ -491,27 +501,28 @@
             position: relative;
             z-index: 10;
             background-color: #fff;
+           
         }
 
-        .handles-1 + label {
-            background: url(../img/knob1.jpg) center center no-repeat;
-            background-size: contain;
-        }
+        // .handles-1 + label {
+        //     background: url(../img/knob1.jpg) center center no-repeat;
+        //     background-size: contain;
+        // }
 
-        .handles-2 + label {
-            background: url(../img/knob4.jpg) center center no-repeat;
-            background-size: contain;
-        }
+        // .handles-2 + label {
+        //     background: url(../img/knob4.jpg) center center no-repeat;
+        //     background-size: contain;
+        // }
 
-        .handles-3 + label {
-            background: url(../img/knob6.jpg) center center no-repeat;
-            background-size: contain;
-        }
+        // .handles-3 + label {
+        //     background: url(../img/knob6.jpg) center center no-repeat;
+        //     background-size: contain;
+        // }
 
-        .handles-4 + label {
-            background: url(../img/knob8.jpg) center center no-repeat;
-            background-size: contain;
-        }
+        // .handles-4 + label {
+        //     background: url(../img/knob8.jpg) center center no-repeat;
+        //     background-size: contain;
+        // }
     }
 
     .parametrs {
@@ -778,6 +789,26 @@
 
     .form-title {
         margin-bottom: 30px;
+    }
+
+
+    .params-conten-info,
+    .checkout-info-message {
+        max-width: 600px;
+        width: 100%;
+        background-color: #0d6b68;
+        color: #fff;
+        font-size: 22px;
+        border-radius: 25px;
+        padding: 20px 15px;
+    }
+
+    .bf_calc__title-dops {
+        margin-bottom: 25px;
+        font-size: 22px;
+        font-weight: 500;
+        text-transform: uppercase;
+        width: 100%;
     }
 
 }
